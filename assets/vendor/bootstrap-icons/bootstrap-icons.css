@@ -1,0 +1,47 @@
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("./fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf") format("woff2"),
+url("./fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.bi-briefcase-fill::before { content: "\f1cb"; }
+.bi-briefcase::before { content: "\f1cc"; }
+.bi-card-checklist::before { content: "\f224"; }
+.bi-binoculars-fill::before { content: "\f18e"; }
+.bi-binoculars::before { content: "\f18f"; }
+.bi-facebook::before { content: "\f344"; }
+.bi-instagram::before { content: "\f437"; }
+.bi-twitter::before { content: "\f5ef"; }
+.bi-linkedin::before { content: "\f472"; }
+
+
+.bi-list-check::before { content: "\f473"; }
+.bi-list-nested::before { content: "\f474"; }
+.bi-list-ol::before { content: "\f475"; }
+.bi-list-stars::before { content: "\f476"; }
+.bi-list-task::before { content: "\f477"; }
+.bi-list-ul::before { content: "\f478"; }
+.bi-list::before { content: "\f479"; }
+.bi-arrow-up::before { content: "\f148"; }
+.bi-arrow-up-short::before { content: "\f145"; }
+
+
+
+
