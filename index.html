@@ -8,6 +8,8 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <link rel="shortcut icon" href="./assets/img/code.png" type="image/x-icon">
     <!-- Favicons -->
     <!-- <link href="assets/img/favicon.png" rel="icon" />
@@ -541,11 +543,12 @@
                       </div>
                       <div>
                         <form
-                          action="forms/contact.php"
-                          method="post"
+                          action=""
+                          
                           role="form"
-                          class="php-email-form"
+                          id="submit-form"
                         >
+                        <!-- forms/contact.php -->
                           <div class="row">
                             <div class="col-md-12 mb-3">
                               <div class="form-group">
@@ -595,11 +598,9 @@
                               </div>
                             </div>
                             <div class="col-md-12 text-center my-3">
-                              <div class="loading">Loading</div>
+                              <!-- <div class="loading">Loading</div> -->
                               <div class="error-message"></div>
-                              <div class="sent-message">
-                                Your message has been sent. Thank you!
-                              </div>
+                             
                             </div>
                             <div class="col-md-12 text-center">
                               <button
@@ -699,10 +700,30 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
     
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbzniELbTxCAC4Aosm56pFqsn1oeDmqMN7SyGGM5RN2VzMpU_dfxEY1KWrKBxbNZT_n1Bw/exec",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
+  
+              }
+          })
+      })
+  </script>
   </body>
 </html>
